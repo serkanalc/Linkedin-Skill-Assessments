@@ -862,6 +862,19 @@ fun main() {
 - [x] `Any` ([reference](https://kotlinlang.org/docs/inheritance.html))
 - [ ] `Object`
 
+### Q78. You have written a function, sort(), that should accept only collections that implement the `Comparable` interface. How can you restrict the function?
+
+```kotlin
+fun sort(list: List<T>): List <T> {
+    return list.sorted()
+}
+```
+
+- [ ] `Add <T -> Comparable<T>> between the `fun` keyword and the function name`
+- [ ] `Add Comparable<T> between the `fun` keyword and the function name`
+- [x] `Add <T : Comparable<T>> between the `fun` keyword and the function name` ([reference](https://kotlinlang.org/docs/generics.html#generic-functions))
+- [ ] `Add <T where Comparable<T>> between the `fun` keyword and the function name`
+
 #### Q79. Kotlin classes are final by default. What does final mean?
 
 - [ ] final means that you cannot use interfaces with this class.
