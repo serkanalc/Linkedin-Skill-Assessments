@@ -873,3 +873,12 @@ fun sort(list: List<T>): List <T> {
 - [ ] `Add Comparable<T> between the `fun` keyword and the function name`
 - [ ] `Add <T : Comparable<T>> between the `fun` keyword and the function name`
 - [ ] `Add <T where Comparable<T>> between the `fun` keyword and the function name`
+
+#### Q79. Kotlin classes are final by default. What does final mean?
+
+
+- [ ] final means that you cannot use interfaces with this class.
+- [ ] final means that this is the only file that can use the class.
+- [ ] final means that you cannot extend the class.
+- [ ] final classes cannot be used in the finally section of a try/catch block.
+
