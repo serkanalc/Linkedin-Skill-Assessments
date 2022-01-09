@@ -1,35 +1,32 @@
 # Kotlin
 
-#### Q1. You would like to print each score on its own line with its cardinal position. Without using **var** or **val**, which method allows iteration with both the value and its position?
+#### Q55. The code snippet compile and runs without issue, but does not wait for the coroutine to show the "there" message. Which line of code will cause the code to wait for the coroutine to finish before exiting?
 
 ```kotlin
-fun main() {
-  val highScores = listOf(4000, 2000, 10200, 12000, 9030)
+fun main() = runBlocking {
+    val task = GlobalScope.launch {
+        delay(1000L)
+        println("there")
+    }
+    println("Hello,")
 }
 ```
 
-- [x] `.withIndex()`
-      ([reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/with-index.html))
-- [ ] `.forEachIndexed()`
-- [ ] `.forEach()`
-- [ ] `.forIndexes()`
+- [ ] `task.complete()`
+- [ ] `task.wait()`
+- [x] `task.join()`
+- [ ] `task.cancel()`
 
-#### Q2. When the **Airplane** class is instantiated, it displays **Aircraft = null**, not **Aircraft = C130** why?
+#### Q56. You would like to group a list of students by last name and get the total number of groups. Which line of code accomplishes this, assuming you have a list of the Student data class?
 
 ```kotlin
-abstract class Aircraft {
-  init { println("Aircraft = ${getName()}") }
-  abstract fun getName(): String
-}
-class Airplane(private val name: String) : Aircraft() {
-  override fun getName(): String = name
-}
+data class Student(val firstName: String, val lastName: String)
 ```
 
-- [ ] Classes are initialized in the same order they are in the file, therefore, Aircraft should appear after Airplane
-- [ ] The code needs to pass the parameter to the base class's primary constructor. Since it does not, it receives a null
-- [x] Abstract function always returns null
-- [ ] A superclass is initialized before its subclass. Therefore, name has not been set before it is rendered
+- [x] `println(students.groupBy{ it.lastName }.count())`
+- [ ] `println(students.groupBy{ it.lastName.first() }.fold().count())`
+- [ ] `println(students.groupingBy{ it.lastName.first() }.count())`
+- [ ] `println(students.groupingBy{ it.lastName.first() }.size())`
 
 #### Q3. Kotlin interfaces ad abstract classes are very similar. What is one thing abstract class can do that interfaces cannot?
 
@@ -38,14 +35,6 @@ class Airplane(private val name: String) : Aircraft() {
 - [ ] Only abstract classes can have abstract methods
 - [x] Only abstract classes can store state
       [reference](https://blog.kotlin-academy.com/abstract-class-vs-interface-in-kotlin-5ab8697c3a14)
-
-#### Q4. Inside an extension function, what is the name of the variable that corresponds to the receiver object
-
-- [ ] The variable is named **it**
-- [x] The variable is named **this**
-      [reference](https://www.programiz.com/kotlin-programming/extension-functions#:~:text=The%20class%20name%20is%20the,function%20refers%20the%20receiver%20object)
-- [ ] The variable is named **receiver**
-- [ ] The variable is named **default**
 
 #### Q5. Your application has an **add** function. How could you use its **invoke** methods and display the results?
 
@@ -222,31 +211,25 @@ val list2 = (80..100).toList().filter(_____)
 - [x] a companion object ([reference](https://kotlinlang.org/docs/object-declarations.html#companion-objects))
 - [ ] a backing field
 
-#### Q21. Your code need to try casting an object. If the cast is not possible, you do not want an exception generated, instead you want null to be assigned. Which operator can safely cast a value?
-
-- [x] `as?` ([reference](https://kotlinlang.org/docs/typecasts.html#safe-nullable-cast-operator))
-- [ ] `??`
-- [ ] `is`
-- [ ] `as`
-
-#### Q22. Kotlin will not compile this code snippet. What is wrong?
-
-```kotlin
-class Employee
-class Manager : Employee()
-```
-
-- [x] In order to inherit from a class, it must be marked **open** ([reference](https://kotlinlang.org/docs/inheritance.html))
-- [ ] In order to inherit from a class, it must be marked **public**
-- [ ] In order to inherit from a class, it must be marked **sealed**
-- [ ] In order to inherit from a class, it must be marked **override**
-
 #### Q23. Which function changes the value of the element at the current iterator location?
 
 - [ ] `change()`
 - [ ] `modify()`
 - [x] `set()` ([reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list-iterator/set.html))
 - [ ] `assign()`
+
+#### Q1. You would like to print each score on its own line with its cardinal position. Without using **var** or **val**, which method allows iteration with both the value and its position?
+
+```kotlin
+fun main() {
+  val highScores = listOf(4000, 2000, 10200, 12000, 9030)
+}
+```
+
+- [x] `.withIndex()`([reference](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/with-index.html))
+- [ ] `.forEachIndexed()`
+- [ ] `.forEach()`
+- [ ] `.forIndexes()`
 
 #### Q24. From the Supervisor subclass, how do you call the Employee class's display() method?
 
@@ -308,6 +291,55 @@ class Person
 - [ ] `print(), println(), and toString()`
 - [ ] `clone(), equals(), and super()`
 
+#### Q70. What will happen when you try to build and run this code snippet?
+```kotlin
+class SpecialFunction : () -> Unit {
+  override fun invoke() {
+    println("Invoked from an instance.")
+  }
+}
+fun main() {
+  try { SpecialFunction()() }
+  catch (ex: Exception) { println("An error occurred") }
+}
+```
+- [ ] A syntax error occurs due to the line `SpecialFunction()()`.
+- [ ] The message "An Error occurred" is displayed.
+- [x] The message "Invoked from an instance." is displayed. // the second "()" is equals to .invoke()
+- [ ] A compile error occurs. You cannot override the `invoke()` method.
+#### Q71. Which statement declares a variable mileage whose value never changes and is inferred to be an integer?
+- [ ] `val mileage:Int = 566`
+- [ ] `var mileage:Int = 566`
+- [x] `val mileage = 566` (Note: inferred)
+- [ ] `const int mileage = 566`
+#### Q72. You have two arrays, a and b. Which line combines a and b as a list containing the contents of both?
+```kotlin
+val a = array0f(1, 2, 3)
+val b = array0f(166,266,366)
+```
+- [ ] `val c = a + b`
+- [ ] `val c = list0f(a, b)`
+- [x] `val c = list0f(*a, *b)` ([reference](https://www.techiedelight.com/join-two-lists-kotlin/))
+- [ ] `val c = list0f(a+b)`
+#### Q73. What is the preferred way to create an immutable variable of type long?
+- [ ] `var longInt = 10L`
+- [ ] `const long longInt = 10`
+- [x] `val longInt = 10L`
+- [ ] `val longInt:Long = 10`
+#### Q74. Which line converts the binaryStr, whish contain only 0s and 1s, to an integer representing its decimal value?
+```kotlin
+val binaryStr = "00001111"
+```
+- [ ] `val myInt = toInt(binaryStr)`
+- [ ] `val myInt = binaryStr.toInt("0b")`
+- [ ] `val myInt = binaryStr.toInt()`
+- [x] `val myInt = binaryStr.toInt(2)`
+#### Q75. In a Kotlin program, which lines can be marked with a label
+- [ ] `Any program line can be marked with a label`
+- [ ] `Any statement can be marked with a label`
+- [x] `Any expression can be marked with a lable`
+- [ ] `Only the beginning of loops can be marked with a label`
+
 #### Q28. Which is the proper way to declare a singleton named DatabaseManager?
 
 - [x] `object DatabaseManager {}` ([reference](https://kotlinlang.org/docs/object-declarations.html#object-declarations))
@@ -315,34 +347,6 @@ class Person
 - [ ] `static class DatabaseManager {}`
 - [ ] `data class DatabaseManager {}`
 
-#### Q29. In order to subclass the Person class, what is one thing you must do?
-
-```kotlin
-abstract class Person(val name: String) {
-  abstract fun displayJob(description: String)
-}
-```
-
-- [ ] The subclass must be marked sealed
-- [x] You must override the `displayJob()` method ([reference](https://kotlinlang.org/docs/inheritance.html))
-- [ ] You must mark the subclass as final
-- [ ] An abstract class cannot be extended, so you must change it to open
-
-#### Q30. The code snippet below translates a database user to a model user. Because their names are both User, you must use their fully qualified names, which is cumbersome. You do not have access to either of the imported classes' source code. How can you shorten the type names?
-
-```kotlin
-import com.tekadept.app.model.User
-import com.tekadept.app.database.User
-class UserService{
-  fun translateUser(user: com.tekadept.app.database.User): User =
-    com.tekadept.app.model.User("${user.first} ${user.last}")
-}
-```
-
-- [x] Use import as to change the type name ([reference](https://kotlinlang.org/docs/packages.html#visibility-of-top-level-declarations))
-- [ ] Create subtypes with shorter names
-- [ ] Create interfaces with shorter names
-- [ ] Create extension classes with shorter names
 
 #### Q31. Your function is passed by a parameter obj of type Any. Which code snippet shows a way to retrieve the original type of obj, including package information?
 
@@ -389,6 +393,35 @@ enum class Signal { OPEN, CLOSED, SENDING }
 - [ ] `println(Signal.SENDING.hashCode())`
 - [ ] `println(Signal.SENDING)`
 - [x] `println(Signal.SENDING.ordinal)` ([reference](https://kotlinlang.org/docs/enum-classes.html#working-with-enum-constants))
+
+#### Q29. In order to subclass the Person class, what is one thing you must do?
+
+```kotlin
+abstract class Person(val name: String) {
+  abstract fun displayJob(description: String)
+}
+```
+
+- [ ] The subclass must be marked sealed
+- [x] You must override the `displayJob()` method ([reference](https://kotlinlang.org/docs/inheritance.html))
+- [ ] You must mark the subclass as final
+- [ ] An abstract class cannot be extended, so you must change it to open
+
+#### Q30. The code snippet below translates a database user to a model user. Because their names are both User, you must use their fully qualified names, which is cumbersome. You do not have access to either of the imported classes' source code. How can you shorten the type names?
+
+```kotlin
+import com.tekadept.app.model.User
+import com.tekadept.app.database.User
+class UserService{
+  fun translateUser(user: com.tekadept.app.database.User): User =
+    com.tekadept.app.model.User("${user.first} ${user.last}")
+}
+```
+
+- [x] Use import as to change the type name ([reference](https://kotlinlang.org/docs/packages.html#visibility-of-top-level-declarations))
+- [ ] Create subtypes with shorter names
+- [ ] Create interfaces with shorter names
+- [ ] Create extension classes with shorter names
 
 #### Q37. Both const and @JvmField create constants. What can const do that @JvmField cannot?
 
@@ -534,6 +567,14 @@ for (value in 1..5){
 - [ ] `for( Pair(ndx, value) in 1..20 ){`
 - [ ] `for( (ndx, value) in *(1..20) ){`
 
+#### Q4. Inside an extension function, what is the name of the variable that corresponds to the receiver object
+
+- [ ] The variable is named **it**
+- [x] The variable is named **this**
+      [reference](https://www.programiz.com/kotlin-programming/extension-functions#:~:text=The%20class%20name%20is%20the,function%20refers%20the%20receiver%20object)
+- [ ] The variable is named **receiver**
+- [ ] The variable is named **default**
+
 #### Q47. The Kotlin .. operator can be written as which function?
 
 - [ ] `a.from(b)`
@@ -642,34 +683,6 @@ val z = listOf(10, 20, 30, 40)
 - [ ] There are not any differences. `y` and `z` are a type alias of the same type.
 - [ ] You add more elements to `z` since it is a list.
 - [ ] You can modify the contents of the elements in `z` but not `y`.
-
-#### Q55. The code snippet compile and runs without issue, but does not wait for the coroutine to show the "there" message. Which line of code will cause the code to wait for the coroutine to finish before exiting?
-
-```kotlin
-fun main() = runBlocking {
-    val task = GlobalScope.launch {
-        delay(1000L)
-        println("there")
-    }
-    println("Hello,")
-}
-```
-
-- [ ] `task.complete()`
-- [ ] `task.wait()`
-- [x] `task.join()`
-- [ ] `task.cancel()`
-
-#### Q56. You would like to group a list of students by last name and get the total number of groups. Which line of code accomplishes this, assuming you have a list of the Student data class?
-
-```kotlin
-data class Student(val firstName: String, val lastName: String)
-```
-
-- [x] `println(students.groupBy{ it.lastName }.count())`
-- [ ] `println(students.groupBy{ it.lastName.first() }.fold().count())`
-- [ ] `println(students.groupingBy{ it.lastName.first() }.count())`
-- [ ] `println(students.groupingBy{ it.lastName.first() }.size())`
 
 #### Q57. Class BB inherits from class AA. BB uses a different method to calculate the price. As shown, the code does not compile. What changes is needed to resolve the compilation error?
 
@@ -801,52 +814,39 @@ var price: Int = 0
 ```
 val price: Int=0
 ```
-#### Q70. What will happen when you try to build and run this code snippet?
-```kotlin
-class SpecialFunction : () -> Unit {
-  override fun invoke() {
-    println("Invoked from an instance.")
-  }
-}
-fun main() {
-  try { SpecialFunction()() }
-  catch (ex: Exception) { println("An error occurred") }
-}
-```
-- [ ] A syntax error occurs due to the line `SpecialFunction()()`.
-- [ ] The message "An Error occurred" is displayed.
-- [x] The message "Invoked from an instance." is displayed. // the second "()" is equals to .invoke()
-- [ ] A compile error occurs. You cannot override the `invoke()` method.
-#### Q71. Which statement declares a variable mileage whose value never changes and is inferred to be an integer?
-- [ ] `val mileage:Int = 566`
-- [ ] `var mileage:Int = 566`
-- [x] `val mileage = 566` (Note: inferred)
-- [ ] `const int mileage = 566`
-#### Q72. You have two arrays, a and b. Which line combines a and b as a list containing the contents of both?
-```kotlin
-val a = array0f(1, 2, 3)
-val b = array0f(166,266,366)
-```
-- [ ] `val c = a + b`
-- [ ] `val c = list0f(a, b)`
-- [x] `val c = list0f(*a, *b)` ([reference](https://www.techiedelight.com/join-two-lists-kotlin/))
-- [ ] `val c = list0f(a+b)`
-#### Q73. What is the preferred way to create an immutable variable of type long?
-- [ ] `var longInt = 10L`
-- [ ] `const long longInt = 10`
-- [x] `val longInt = 10L`
-- [ ] `val longInt:Long = 10`
-#### Q74. Which line converts the binaryStr, whish contain only 0s and 1s, to an integer representing its decimal value?
-```kotlin
-val binaryStr = "00001111"
-```
-- [ ] `val myInt = toInt(binaryStr)`
-- [ ] `val myInt = binaryStr.toInt("0b")`
-- [ ] `val myInt = binaryStr.toInt()`
-- [x] `val myInt = binaryStr.toInt(2)`
-#### Q75. In a Kotlin program, which lines can be marked with a label
-- [ ] `Any program line can be marked with a label`
-- [ ] `Any statement can be marked with a label`
-- [x] `Any expression can be marked with a lable`
-- [ ] `Only the beginning of loops can be marked with a label`
 
+#### Q2. When the **Airplane** class is instantiated, it displays **Aircraft = null**, not **Aircraft = C130** why?
+
+```kotlin
+abstract class Aircraft {
+  init { println("Aircraft = ${getName()}") }
+  abstract fun getName(): String
+}
+class Airplane(private val name: String) : Aircraft() {
+  override fun getName(): String = name
+}
+```
+
+- [ ] Classes are initialized in the same order they are in the file, therefore, Aircraft should appear after Airplane
+- [ ] The code needs to pass the parameter to the base class's primary constructor. Since it does not, it receives a null
+- [x] Abstract function always returns null
+- [ ] A superclass is initialized before its subclass. Therefore, name has not been set before it is rendered
+
+#### Q21. Your code need to try casting an object. If the cast is not possible, you do not want an exception generated, instead you want null to be assigned. Which operator can safely cast a value?
+
+- [x] `as?` ([reference](https://kotlinlang.org/docs/typecasts.html#safe-nullable-cast-operator))
+- [ ] `??`
+- [ ] `is`
+- [ ] `as`
+
+#### Q22. Kotlin will not compile this code snippet. What is wrong?
+
+```kotlin
+class Employee
+class Manager : Employee()
+```
+
+- [x] In order to inherit from a class, it must be marked **open** ([reference](https://kotlinlang.org/docs/inheritance.html))
+- [ ] In order to inherit from a class, it must be marked **public**
+- [ ] In order to inherit from a class, it must be marked **sealed**
+- [ ] In order to inherit from a class, it must be marked **override**
