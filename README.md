@@ -6,5 +6,5 @@
 
 - [x] [React.JS](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/React)
 - [x] [Kotlin](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/Kotlin)
-- [ ] Android
+- [x] [Android](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/Android)
 - [ ] Java
