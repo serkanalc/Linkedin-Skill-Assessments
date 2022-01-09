@@ -856,3 +856,9 @@ fun main() {
 - [x] You should use `minus` instead of hash, then type alias the minus symbol. // Note: How can you fix it?
 - [ ] You need to replace operator with the word `infix`.
 
+#### Q76. All classes in Kotlin inherit from which superclass?
+- [ ] `Default`
+- [ ] `Super`
+- [x] `Any` ([reference](https://kotlinlang.org/docs/inheritance.html))
+- [ ] `Object`
+
