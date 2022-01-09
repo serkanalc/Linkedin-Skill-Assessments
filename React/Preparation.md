@@ -1,6 +1,4 @@
-# Linkedin-Skill-Assessments
-
-## React.js
+# React.Js Pre-Exam Preparation 
 
 #### Q1. To get the first item from the array ("cooking") using array destructuring, how do you adjust this line?
 
