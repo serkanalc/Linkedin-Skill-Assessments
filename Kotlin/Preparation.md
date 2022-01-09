@@ -848,3 +848,28 @@ fun main() {
 - [ ] `Super`
 - [ ] `Any` 
 - [ ] `Object`
+
+#### Q77. You have created an array to hold three strings. When you run the code below, the compiler displays an error. Why does the code fail?
+
+```kotlin
+val names = arrayOf<String>(3)
+names[3] = "Delta"
+```
+
+- [ ] `Arrays use zero-based indexes. The value 3 is outside the array's bounds`
+- [ ] `You accessed the element with an index but should have used .set()`
+- [ ] `You declared the array with val but should have used var`
+- [ ] `You cannot change the value of an element of an array. You should have used a mutable list`
+
+#### Q78. You have written a function, sort(), that should accept only collections that implement the `Comparable` interface. How can you restrict the function?
+
+```kotlin
+fun sort(list: List<T>): List <T> {
+    return list.sorted()
+}
+```
+
+- [ ] `Add <T -> Comparable<T>> between the `fun` keyword and the function name`
+- [ ] `Add Comparable<T> between the `fun` keyword and the function name`
+- [ ] `Add <T : Comparable<T>> between the `fun` keyword and the function name`
+- [ ] `Add <T where Comparable<T>> between the `fun` keyword and the function name`
