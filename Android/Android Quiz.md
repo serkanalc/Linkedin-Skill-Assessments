@@ -253,7 +253,7 @@ Notice: AndroidJUnitRunner lets us run JUnit3/4-style tests on Android Devices
 
 #### Q20. Which drawable definition allows you to achieve the shape below?
 
-![img](image/shape.png)
+![shape](https://user-images.githubusercontent.com/70329389/148702545-09e49301-1350-401d-90e4-2cd1885b7d1e.png)
 
 - [ ]
 
@@ -373,13 +373,13 @@ Notice: AndroidJUnitRunner lets us run JUnit3/4-style tests on Android Devices
 ```
 
 - [ ] A
-      ![img](image/00.jpeg)
+      ![00](https://user-images.githubusercontent.com/70329389/148702555-9cd5bc7c-e5f3-4780-8e18-6a0a609bb697.jpeg)
 - [x] B
-      ![img](image/01.jpeg)
+      ![01](https://user-images.githubusercontent.com/70329389/148702562-2fcce484-59e5-4fbf-bb43-82d2a393bb74.jpeg)
 - [ ] C
-      ![img](image/02.jpeg)
+      ![02](https://user-images.githubusercontent.com/70329389/148702573-7b0fcdc6-f753-4788-a21a-f1904c35375c.jpeg)
 - [ ] D
-      ![img](image/03.jpeg)
+      ![03](https://user-images.githubusercontent.com/70329389/148702582-851da52e-8319-4c99-bf83-69b030d1ebe7.jpeg)
 
 #### Q28. You want to open the default Dialer app on a device. What is wrong with this code?
 
@@ -487,7 +487,8 @@ buildTypes {
 
 #### Q35. Which code snippet would achieve the layout displayed below?
 
-![img](image/04.jpeg)
+![04](https://user-images.githubusercontent.com/70329389/148702528-cc4196c8-9b79-4305-8bf9-a3fa1afa58d9.jpeg)
+
 
 - [ ]
 
@@ -672,7 +673,7 @@ xml
 
 #### Q44. Which drawable definition allows you to achieve the shape below?
 
-![img](image/43.jpeg)
+![43](https://user-images.githubusercontent.com/70329389/148702596-f5bf291b-f92b-4dcb-82d4-544ec27696f3.jpeg)
 
 - [ ]
 
@@ -727,7 +728,7 @@ xml
 
 #### Q45. Given the ConstraintLayout below, which statement is true?
 
-![img](image/44.jpeg)
+![44](https://user-images.githubusercontent.com/70329389/148702629-4a4c58b3-d466-4d04-8d83-07ceab64397d.jpeg)
 
 - [ ] View B is not horizontally constrained.
 - [ ] View C has too many constraints.
