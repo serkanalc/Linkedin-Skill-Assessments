@@ -342,7 +342,7 @@ val binaryStr = "00001111"
 #### Q31. In a Kotlin program, which lines can be marked with a label
 - [ ] `Any program line can be marked with a label`
 - [ ] `Any statement can be marked with a label`
-- [x] `Any expression can be marked with a lable`
+- [x] `Any expression can be marked with a lable` ([reference](https://kotlinlang.org/docs/returns.html#break-and-continue-labels))
 - [ ] `Only the beginning of loops can be marked with a label`
 
 #### Q32. Which is the proper way to declare a singleton named DatabaseManager?
