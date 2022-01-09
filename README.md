@@ -1,4 +1,4 @@
-# Linkedin-Skill-Assessments
+# Linkedin Skill Assessments
 
 ![linkedin-hufnews](https://user-images.githubusercontent.com/70329389/148679060-a829349b-0560-4a35-82db-cd2d7475543a.gif)
 
