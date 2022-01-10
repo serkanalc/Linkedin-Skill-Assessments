@@ -879,6 +879,6 @@ fun sort(list: List<T>): List <T> {
 
 - [ ] final means that you cannot use interfaces with this class.
 - [ ] final means that this is the only file that can use the class.
-- [x] final means that you cannot extend the class.
+- [x] final means that you cannot extend the class.([reference](https://kotlinlang.org/docs/inheritance.html )) 
 - [ ] final classes cannot be used in the finally section of a try/catch block.
 
