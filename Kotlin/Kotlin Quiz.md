@@ -862,7 +862,7 @@ fun main() {
 - [x] `Any` ([reference](https://kotlinlang.org/docs/inheritance.html))
 - [ ] `Object`
 
-### Q78. You have written a function, sort(), that should accept only collections that implement the `Comparable` interface. How can you restrict the function?
+#### Q77. You have written a function, sort(), that should accept only collections that implement the `Comparable` interface. How can you restrict the function?
 
 ```kotlin
 fun sort(list: List<T>): List <T> {
@@ -875,7 +875,7 @@ fun sort(list: List<T>): List <T> {
 - [x] `Add <T : Comparable<T>> between the `fun` keyword and the function name` ([reference](https://kotlinlang.org/docs/generics.html#generic-functions))
 - [ ] `Add <T where Comparable<T>> between the `fun` keyword and the function name`
 
-#### Q79. Kotlin classes are final by default. What does final mean?
+#### Q78. Kotlin classes are final by default. What does final mean?
 
 - [ ] final means that you cannot use interfaces with this class.
 - [ ] final means that this is the only file that can use the class.
