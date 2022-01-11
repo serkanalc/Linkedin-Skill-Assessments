@@ -7,7 +7,7 @@
 - [ ] Adobe Illustrator
 - [ ] Adobe Photoshop
 - [x] [Android](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/Android)
-- [x] Css
+- [x] [Css](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/Css)
 - [ ] Java
 - [x] [Kotlin](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/Kotlin)
 - [x] [React.JS](https://github.com/serkanalc/Linkedin-Skill-Assessments/tree/main/React)
