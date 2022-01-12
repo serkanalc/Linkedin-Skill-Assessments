@@ -8,12 +8,12 @@ a
 .example a
 div a
 ```
-- [x] `.example a`
+- [x] `.example a` [**Reference**](https://css-tricks.com/specifics-on-css-specificity/)
 - [ ] `div a`
 - [ ] `a`
 - [ ] `ul li a`
 #### Q2. Using an attribute selector, how would you select an `<a>` element with a "title" attribute?
-- [x] a[title]{...}
+- [x] a[title]{...} [**Reference**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#reference_table_of_selectors)
 - [ ] a > title {...}
 - [ ] a.title {...}
 - [ ] a=title {...}
@@ -45,12 +45,13 @@ div a
   ```markdown
       They all target the same nav element.
   ```
-- [x]
+- [x] [**Reference**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#type_class_and_id_selectors)
   ```markdown
   1. An element with an class of "nav"
   2. A nav element
-  3. An element with a id of "nav"
+  3. An element with a id of "nav" 
   ```
+  
 - [ ]
   ```markdown
   1. An element with an class of "nav"
@@ -62,13 +63,13 @@ div a
 
 - [ ] Opacity specifies the level of transparency of the child elements. Background with an `rgba()` value applies transparency to the background color only.
 - [ ] Opacity applies transparency to the background color only. Background with an `rgba()` value specifies the level of transparency of an element, as a whole, including its content.
-- [x] Opacity specifies the level of transparency of an element, including its content. Background with an `rgba()` value applies transparency to the background color only.
+- [x] Opacity specifies the level of transparency of an element, including its content. Background with an `rgba()` value applies transparency to the background color only. [**Reference**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Make_box_transparent#changing_the_opacity_of_the_background_color_only)
 - [ ] Opacity applies transparency to the parent and child elements. Background with an `rgba()` value specifies the level of transparency of the parent element only.
 
 #### Q6. What is true of block and inline elements? (_Alternative_: Which statement about block and inline elements is true?)
 
 - [ ] By default, block elements are the same height and width as the content container between their tags; inline elements span the entire width of its container.
-- [x] By default, block elements span the entire width of its container; inline elements are the same height and width as the content contained between their tags.
+- [x] By default, block elements span the entire width of its container; inline elements are the same height and width as the content contained between their tags. [**Reference**](https://betterprogramming.pub/understanding-css-display-none-block-inline-and-inline-block-63f6510df93)
 - [ ] A `<nav>` element is an example of an inline element. `<header>` is an example of a block element.
 - [ ] A `<span>` is an example of a block element. `<div>` is an example of an inline element.
 
@@ -83,13 +84,13 @@ div a
 ```
 
 - [ ] The first column will have a width of 50px. The second column will be 50px wide and the third column will be 100px wide.
-- [x] The first column will have a width of 50px. The second column will be 150px wide and the third column will be 300px wide.
+- [x] The first column will have a width of 50px. The second column will be 150px wide and the third column will be 300px wide. [**Reference**](https://web.dev/learn/css/grid/#the-fr-unit)
 - [ ] The first column will have a width of 50px. The second column will be 300px wide and the third column will be 150px wide.
 - [ ] The first column will have a width of 50px. The second column will be 500px wide and the third column will be 1000px wide.
 
 #### Q8. What is the line-height property primarily used for?
 
-- [x] to control the height of the space between two lines of content
+- [x] to control the height of the space between two lines of content [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
 - [ ] to control the height of the space between heading elements
 - [ ] to control the height of the character size
 - [ ] to control the width of the space between characters
@@ -99,11 +100,11 @@ div a
 - [ ] Multiple classes can be used within the same element.
 - [ ] The same class can be used multiple times per page.
 - [ ] Class selectors with a leading period
-- [x] Classes can be used multiple times per page but not within the same element.
+- [x] Classes can be used multiple times per page but not within the same element. [**Reference**](https://stackoverflow.com/questions/31412923/adding-more-than-one-class-html)
 
 #### Q10. There are many properties that can be used to align elements and create page layouts such as float, position, flexbox and grid. Of these four properties, which one should be used to align a global navigation bar which stays fixed at the top of the page?
 
-- [x] position
+- [x] position [**Reference**](https://www.w3schools.com/howto/howto_css_fixed_menu.asp)
 - [ ] flexbox
 - [ ] grid
 - [ ] float
