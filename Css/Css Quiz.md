@@ -114,14 +114,14 @@ div a
 ```css
 background: blue url(image.jpg) no-repeat scroll 0px 0px;
 ```
-- [x]
+- [x] [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#background_properties)
   ```css
   background-color: blue;
   background-image: url(image.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0px 0px;
-  ```
+  ``` 
 - [ ]
   ```css
   background-color: blue;
@@ -171,13 +171,13 @@ a {
 ```
 
 - [ ] green
-- [x] yellow
+- [x] yellow [**Reference**](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity)
 - [ ] blue
 - [ ] red
 
 #### Q13. When elements overlap, they are ordered on the z-axis (i.e., which element covers another). The z-index property can be used to specify the z-order of overlapping elements. Which set of statements about the z-index property are true?
 
-- [x] Larger z-index values appear on top of elements with a lower z-index value. Negative and positive numbers can be used. z-index can only be used on positioned elements.
+- [x] Larger z-index values appear on top of elements with a lower z-index value. Negative and positive numbers can be used. z-index can only be used on positioned elements. [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
 - [ ] Smaller z-index values appear on top of elements with a larger z-index value. Negative and positive numbers can be used. z-index must also be used with positioned elements.
 - [ ] Larger z-index values appear on top of elements with a lower z-index value. Only positive numbers can be used. z-index must also be used with positioned elements.
 - [ ] Smaller z-index values appear on top of elements with a larger z-index value. Negative and positive numbers can be used. z-index can be used with or without positioned elements.
@@ -188,7 +188,7 @@ a {
 line-height: 20px;
 line-height: 2;
 ```
-- [x] The value of 20px will set the line-height to 20px. The value of 2 will set the line-height to twice the size of the corresponding font-size value.
+- [x] The value of 20px will set the line-height to 20px. The value of 2 will set the line-height to twice the size of the corresponding font-size value. [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#syntax)
 - [ ] The value of 20px will set the line-height to 20px. The value of 2 is not valid.
 - [ ] The value of 20px will set the line-height to 20px. The value of 2 will default to a value of 2px.
 - [ ] The value of 20px will set the line-height to 20px. The value of 2 will set the line-height to 20% of the corresponding font-size value.
@@ -210,7 +210,7 @@ section + p {
 
 - [ ] Paragraph one will be blue, paragraph two will be red.
 - [ ] Both paragraphs will be blue.
-- [x] Paragraphs one will be red, paragraph two will be blue.
+- [x] Paragraphs one will be red, paragraph two will be blue. [**Reference**](https://web.dev/learn/css/selectors/#next-sibling-combinator)
 - [ ] Both paragraphs will be red.
 
 #### Q16.What are three valid ways of adding CSS to an HTML page?
@@ -233,7 +233,7 @@ section + p {
   2. Internal; CSS is included within the <header> element of the HTML file.
   3. Inline; CSS is added to the HTML tag.
   ```
-- [x]
+- [x] [**Reference**](https://www.w3schools.com/CSS/css_howto.asp)
   ```markdown
   1. External; CSS is written in a separate file and is linked within the <head> element of the HTML file.
   2. Inline; CSS is added to the HTML tag.
@@ -244,7 +244,7 @@ section + p {
 
 - [ ] CSS can be applied to SVGs but JavaScript cannot be.
 - [ ] SVGs work best for creating 3D graphics.
-- [x] SVGs can be created as a vector graphic or coded using SVG specific elements such as &#x3C;svg&#x3E;, &#x3C;line&#x3E;, and &#x3C;ellipse&#x3E;.
+- [x] SVGs can be created as a vector graphic or coded using SVG specific elements such as &#x3C;svg&#x3E;, &#x3C;line&#x3E;, and &#x3C;ellipse&#x3E;. [**Reference**](https://developer.mozilla.org/en-US/docs/Web/SVG)
 - [ ] SVGs are a HAML-based markup language for creating vector graphics.
 
 #### Q18. In the example below, when will the color pink be applied to the anchor element?
@@ -257,7 +257,7 @@ a:active {
 
 - [ ] The color of the link will display as pink after its been clicked or if the mouse is hovering over the link.
 - [ ] The color of the link will display as pink on mouse hover.
-- [x] The color of the link will display as pink while the link is being clicked but before the mouse click is released.
+- [x] The color of the link will display as pink while the link is being clicked but before the mouse click is released. [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 - [ ] The color of the link will display as pink before it has been clicked.
 
 #### Q19. To change the color of an SVG using CSS, which property is used?
@@ -265,19 +265,19 @@ a:active {
 - [ ] Use background-fill to set the color inside the object and stroke or border to set the color of the border.
 - [ ] The color cannot be changed with CSS.
 - [ ] Use fill or background to set the color inside the object and stroke to set the color of the border.
-- [x] Use fill to set the color inside the object and stroke to set the color of the border.
+- [x] Use fill to set the color inside the object and stroke to set the color of the border. [**Reference**](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill)
 
 #### Q20. When using position: fixed, what will the element always be positioned relative to?
 
 - [ ] the closest element with position: relative
-- [x] the viewport
+- [x] the viewport [**Reference**](https://www.w3schools.com/Css/css_positioning.asp)
 - [ ] the parent element
 - [ ] the wrapper element
 
 #### Q21. By default, a background image will repeat \_
 
 - [ ] only if the background-repeat property is set to repeat
-- [x] indefinitely, vertically, and horizontally
+- [x] indefinitely, vertically, and horizontally [**Reference**](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)
 - [ ] indefinitely on the horizontal axis only
 - [ ] once, on the x and y axis
 
